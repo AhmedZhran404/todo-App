@@ -1,0 +1,365 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Exo 2', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    line-height: 1.6;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    background-attachment: fixed; 
+
+  }
+  
+  /* Glow Effect */
+  .glow-text {
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+  }
+  
+  /* Glow Effect on Button */
+  .glow-button {
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 81, 47, 0.6);
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .glow-button:hover {
+    background: linear-gradient(45deg, #dd2476, #ff512f);
+    box-shadow: 0 0 20px rgba(255, 81, 47, 0.8);
+    transform: scale(1.1);
+    text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+  }
+  
+  /* Floating Effect */
+  .floating-element {
+    animation: floating 3s ease-in-out infinite;
+  }
+  
+  @keyframes floating {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Section Styling */
+  section {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Fade-In Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Form Styling */
+  form {
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+    position: relative;
+    overflow: hidden;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  /* Slide-In Animation */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Custom Input Styling */
+  .custom-input {
+    flex-grow: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #f0f2f5;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .custom-input:focus {
+    outline: none;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+  }
+  
+  /* Add Task Button Styling */
+  .add-task {
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+    animation: bounceIn 0.8s ease;
+  }
+  
+  /* Bounce-In Animation */
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .add-task:hover {
+    background: linear-gradient(45deg, #dd2476, #ff512f);
+    box-shadow: 0 4px 10px rgba(255, 81, 47, 0.6);
+    transform: scale(1.1);
+  }
+  
+  /* Task Container Styling */
+  .task-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 1s ease-in-out;
+  }
+
+  
+  /* Fade-In Up Animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Task List Item Styling */
+  .task-container li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #ffffff, #e9ecef);
+    color: #333;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    animation: slideInUp 0.8s ease-in-out;
+  }
+  
+  /* Slide-In Up Animation */
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .task-container li:hover {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(106, 17, 203, 0.6);
+  }
+  
+  .task-container li .task-name {
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  
+  .task-container li .delete-btn {
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  .task-container li .delete-btn:hover {
+    background: linear-gradient(45deg, #dd2476, #ff512f);
+    box-shadow: 0 4px 10px rgba(255, 81, 47, 0.6);
+    transform: scale(1.1);
+  }
+  
+  /* Floating Action Button */
+
+  .fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+  }
+  
+  .task-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .task-item:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+  }
+  
+  .task-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .task-name:hover {
+    color: #007bff;
+  }
+  
+  .trsh-icon {
+    cursor: pointer;
+    color: #ff6f61;
+    font-size: 18px;
+  }
+  
+  .trsh-icon:hover {
+    color: #d9534f;
+    transform: scale(1.1);
+  }
+  
+  .stuts-todo #progressBar {
+    height: 7px;
+    border-radius: 5px;
+    background-color: #ea355c80;
+    margin-top: 3px;
+    overflow: hidden;
+  }
+  .stuts-todo #progressBar #progress {
+    height: inherit;
+    background-color: #ea355c;
+  }
+  /* Loading screen styles */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #4b0082, #87cefa); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(to bottom right, #4b0082, #87cefa); 
+    overflow: hidden;
+  }
+  
+  /* ? ==== media query ===== */
+
+
+  @media (max-width: 900px){
+    .main-section {
+      width: 100% !important;
+    }
+    
+  }
+  @media (max-width: 700px){
+
+    form {
+      flex-direction: column !important;
+    }
+    form.gap-5 {
+      gap: 20px !important;
+    }
+    input {
+      width: 100% !important;
+    }
+    .add-task {
+      width: 100% !important;
+    }
+
+  }
+  
+  
